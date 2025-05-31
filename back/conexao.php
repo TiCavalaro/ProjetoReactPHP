@@ -2,12 +2,21 @@
 $host = "localhost";
 $db = "gestao_financeira";
 $user = "root";
-$pass = ""; // deixe em branco se estiver usando XAMPP
+$pass = ""; 
+$charset = "utf8mb4";
 
-$conn = new mysqli($host, $user, $pass, $db);
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
-if ($conn->connect_error) {
-    echo json_encode(['mensagem' => 'Erro na conexão com o banco.']);
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,       
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,   
+    PDO::ATTR_EMULATE_PREPARES => false,                
+];
+
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (PDOException $e) {
+    echo json_encode(['mensagem' => 'Erro na conexão com o banco: ' . $e->getMessage()]);
     exit;
 }
 ?>

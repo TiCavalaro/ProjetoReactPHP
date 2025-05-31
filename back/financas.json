@@ -1,10 +1,28 @@
-[
-    {
-        "tipo": "saida",
-        "descricao": "teste",
-        "valor": 23,
-        "categoria": "Cavas",
-        "data": "2002-09-02",
-        "timestamp": "2025-05-31T02:44:00+02:00"
-    }
-]
+{
+    "financas": [
+        {
+            "id": 11,
+            "tipo": "saida",
+            "descricao": "Teste",
+            "valor": "12.00",
+            "categoria": "123",
+            "data": "2002-09-02"
+        },
+        {
+            "id": 12,
+            "tipo": "entrada",
+            "descricao": "teste",
+            "valor": "123123.00",
+            "categoria": "teste",
+            "data": "2002-09-02"
+        },
+        {
+            "id": 13,
+            "tipo": "saida",
+            "descricao": "123",
+            "valor": "12312.00",
+            "categoria": "teste",
+            "data": "2002-04-03"
+        }
+    ]
+}
