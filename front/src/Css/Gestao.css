@@ -1,3 +1,4 @@
+/* Estilo principal */
 .gestao-container {
   background: linear-gradient(to right, #2e005d, #5c008b);
   color: white;
@@ -14,11 +15,12 @@ h1 {
 
 .form-section {
   background-color: rgba(0, 0, 0, 0.6);
-  max-width: 500px;
+  max-width: 800px;
   margin: 20px auto;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(255, 131, 0, 0.5);
+  overflow-x: auto;
 }
 
 .form-section h2 {
@@ -54,3 +56,154 @@ form button {
 form button:hover {
   background-color: #ff8300;
 }
+
+/* Tabela de transações */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: white;
+}
+
+thead {
+  background-color: #ff8300;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.linha-par {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.linha-impar {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tipo.entrada {
+  color: #00ff90;
+  font-weight: bold;
+}
+
+.tipo.saida {
+  color: #ff5050;
+  font-weight: bold;
+}
+
+.valor.entrada {
+  color: #00ff90;
+}
+
+.valor.saida {
+  color: #ff5050;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 10px;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Estilo dos botões no formulário */
+.botoes-form {
+  display: flex;
+  gap: 12px; /* Espaçamento entre os botões */
+  margin-top: 10px;
+}
+
+.botoes-form button {
+  flex: 1; /* Os botões ficam do mesmo tamanho */
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Botão registrar */
+.btn-registrar {
+  background-color: #ff6200;
+}
+
+.btn-registrar:hover {
+  background-color: #ff8300;
+}
+
+/* Botão atualizar */
+.btn-atualizar {
+  background-color: #007bff;
+}
+
+.btn-atualizar:hover {
+  background-color: #0056b3;
+}
+
+/* Botão cancelar */
+.btn-cancelar {
+  background-color: #6c757d;
+}
+
+.btn-cancelar:hover {
+  background-color: #5a6268;
+}
+
+/* Botões da tabela */
+.acoes button {
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-editar {
+  background-color: #007bff;
+}
+
+.btn-editar:hover {
+  background-color: #0056b3;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+}
+
+.btn-excluir:hover {
+  background-color: #a71d2a;
+}
+
